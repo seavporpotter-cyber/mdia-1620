@@ -85,3 +85,5 @@ console.log (`Hello our lovely visitors ! Welcome to ${stableName}!`)
 console.log (`Hello there! We are here to inform you that your payment for ${cheesecake.name} is due. The owning amount is ${(cheesecake.monthlyCost) + (cheesecake.monthlyCost * 0.2) } dollars. Please kindly make your payment by the end of this week.`) 
 
 // MMAKING CHANGES TO THIS FILE FOR THIS NEW BRANCH
+
+//making another change.....
