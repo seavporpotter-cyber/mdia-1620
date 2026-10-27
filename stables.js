@@ -115,3 +115,7 @@ function horseIntro (horse) {
 
 let introMessage = horseIntro(horseTwo);
 console.log (introMessage)
+
+// github notes: //
+// git status> git add stables.js > git commit -m"name of the repo" > git push //
+
