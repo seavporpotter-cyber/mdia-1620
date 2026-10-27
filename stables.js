@@ -84,6 +84,34 @@ console.log (`This is ${stableName}.`)
 console.log (`Hello our lovely visitors ! Welcome to ${stableName}!`)
 console.log (`Hello there! We are here to inform you that your payment for ${cheesecake.name} is due. The owning amount is ${(cheesecake.monthlyCost) + (cheesecake.monthlyCost * 0.2) } dollars. Please kindly make your payment by the end of this week.`) 
 
-// MMAKING CHANGES TO THIS FILE FOR THIS NEW BRANCH
+// Assignment 2 Below //
 
-//making another change.....
+let horseOne = {
+    name: "Tomato",
+    age: 5,
+    favoriteSnack : "crackers",
+    monthlyCost: 300,
+}
+
+let horseTwo = {
+    name: "Cheesecake",
+    age: 5,
+    favoriteSnack: "milk",
+    monthlyCost: 250,
+}
+
+let horseThree = {
+    name: "Mochi",
+    age: 2,
+    favoriteSnack: "bananas",
+    monthlyCost: 400,
+}
+
+// create a function called horseIntro : //
+
+function horseIntro (horse) {
+    return horse.name + " is " + horse.age + " years old 🐎 and their favorite snack is " + horse.favoriteSnack + "💚." ;
+}
+
+let introMessage = horseIntro(horseTwo);
+console.log (introMessage)
