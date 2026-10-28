@@ -110,6 +110,17 @@ if (isHorseHungry) {
     console.log (" yes! The horse is hungry!");
 }
 
+// Create a variable that stores your total number of stalls. Create a function that logs out how many stalls are available, given how many horses you have in your stable.// 
+
+let totalStalls = 24;
+
+function availableStalls (stalls, occupiedStalls) {
+    console.log (stalls - occupiedStalls);
+
+}
+availableStalls (30, 10);
+
+
 // Create a function that logs out how much will an individual horse will owe if rent is paid late //
 
 
