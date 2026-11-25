@@ -1,46 +1,13 @@
-// Welcome!
-//
-//                                                  #    #
-//                                             %%% ##   ##
-//                                          %%%%% ###%🎀###
-//                                         %%%%% ### %%% #
-//                                       %%%%%% ### %%% ###
-//                                        %%%% ## %% #######
-//                                       %%%%% # %% #@#####
-//                                     %%%%%% # % #########
-//                                    %%%%% ##### #########
-//                          ###        %% ####### #########
-//                 %%% ############    ########### ########
-//              %%%% ############################### #######
-//            %%%%% ################################## ######
-//          %%%%%% #################################### #C###
-//         %%%🌸%% #####################################  ###
-//         %%%%% #######################################
-//        %%%%%% ############### BEANS ##################
-//     % %%%%%%% ############### BEANS ##################
-//      %%%%%%%%% ############## BEANS ##################
-//     %%%%%%%%%% ########################################
-//  %%% %%%%%%%%   ###### ################################
-//    %%%%%%%%      ###### #################### ##########
-// % %%%🌸%%%%        ####### ########### ###### ##########
-//  %%%%%%%%%         #######  ########### ###### ########
-// %%%%%%%%%%          ##### ###  ######### ####### ######
-//  %%%%%%%%%%          #### ##               ####### ####
-//  %🌸%%%%%%%%%           ## #                  ##### ###
-//   %%  %% % %%         # ##                      ## ###
-//     %   %    %        # ###                      # ###
-//                        # ###                     ## ###
-//                        # ###                     ## ###
-//                        # ####                   #### ##
-//                       ### ###                  ##### ###
-//                      ####  ###                 ####   ##
-//                     #####   ###                 ##    ##
-//                    #####    ####                      ###
-//                     ##        ###                     ###
-//                                ####                     ##
-//                                 ####                    ###
-//                                                         ####
-//                                                          ##
+// Hi! Welcome to my stable 🌟
+//                      ########
+//                  ####        ####   
+//              #####      🩵       ######   
+//                 ##################
+//                 ##################
+//                 #######     ######
+//                 #######     ######
+//    🌳🌳          #######     ######          🌳 🌳
+// #######################################################
 
 let horseOne = {
     name: "Tomato",
@@ -124,20 +91,49 @@ function checkHorseLocation (horses) {
         console.log(horse.name + " has been moved outside to spend time in the sun.☀️")
     }
 } 
-
 checkHorseLocation([horseTwo]);
 checkHorseLocation([horseThree, horseFour]);
 
 // Food! Create and invoke a function that feeds your horses. If the horse is outside, it should call them in, and then all horses should be fed a treat. Log the activity of the horses.
 
-// function feedHungryHorse (horse)
+function feedHungryHorse (horses) {
+    for (const horse of horses) 
+        if (horse.isHorseInside !== true) {
+            console.log(horse.name + " has been fed with " + horse.favoriteTreat + " !😋")
+        }
+}
+feedHungryHorse (horses)
 
-// Bedtime! Update the function that lets your horses outside so that it also calls them
-// in if it is getting dark. Only the horses that moved should log out a message. Invoke the function.
+// Bedtime! Update the function that lets your horses outside so that it also calls them in if it is getting dark. Only the horses that moved should log out a message. Invoke the function.
+
+function moveHorseBack (isGettingDark, horses) {
+    for (const horse of horses) {
+        if (isGettingDark && horse.isHorseInside == false ) {
+            horse.isHorseInside = true;
+            console.log(horse.name + " has been called inside for bedtime, it's getting dark!🐎")
+        }
+        else if (!isGettingDark && horse.isHorseInside == true ) {
+            horse.isHorseInside = false;
+            console.log(horse.name + " has also been called inside for bedtime, it's getting dark!🐎")
+        }
+    }
+}
+
+moveHorseBack(true, horses);
+
 
 //------------------------- Bonus -------------------------//
 
 // Replace the ascii art at the top of the file with art representing your stable.
-// Initialize a method on your horses that moves them inside if they are outside, and
-// vice versa.
+
+// Initialize a method on your horses that moves them inside if they are outside, and vice versa.
+
+function moveHorseInside (horses) {
+    for (const horse of horses)
+    if (horse.isHorseInside == false) {
+        horse.isHorseInside = true;
+        console.log(horse.name + " has been move inside to get some " + horse.favoriteTreat + " !")
+        }
+}
+moveHorseInside(horses);
 
